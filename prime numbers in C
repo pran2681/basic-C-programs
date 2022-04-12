@@ -1,0 +1,86 @@
+///WAP in C to print all prime number b/w 1 and n
+
+#include<stdio.h>
+int main()
+{
+  int i,j,end,k;
+  printf("Enter the range : ");
+  scanf("%d",&end);
+  printf("Prime numbers b/w 1 and %d are : ",end);
+  for(i=2;i<=end;i++){
+      k=1;
+      for(j=2;j<=i/2;j++){
+          if(i%j==0){
+              k=0;
+              break;
+          }
+      }
+      if(k==1){
+      printf("%d,",i);
+      }
+  }
+  return 0;
+}
+
+
+
+
+
+
+///WAP in C to print sum of all prime number b/w 1 and n
+
+#include<stdio.h>
+int main()
+{
+  int i,j,end,k,sum=0;
+  printf("Enter the range : ");
+  scanf("%d",&end);
+  
+  for(i=2;i<=end;i++){
+      k=1;
+      for(j=2;j<=i/2;j++){
+          if(i%j==0){
+              k=0;
+              break;
+          }
+      }
+      if(k==1){
+          sum += i;
+      
+      }
+  }
+  printf("Prime numbers b/w 1 and %d are : %d",end,sum);
+  return 0;
+}
+
+
+
+
+
+//// WAP in C to print sum of prime numbers in a given range
+
+#include<stdio.h>
+int main()
+{
+  int i,j,start,end,k;
+  
+  printf("Enter the lower limit : ");
+  scanf("%d",&start);
+  printf("Enter the upper limit : ");
+  scanf("%d",&end);
+  
+  printf("The all prime number b/w %d and %d are : ",start,end);
+  for(i=start;i<=end;i++){
+      k=1;
+      for(j=2;j<=i/2;j++){
+          if(i%j==0){
+              k=0;
+              break;
+          }
+      }
+      if(k==1){
+        printf("%d, ",i);
+      }
+  }
+  return 0;
+}
