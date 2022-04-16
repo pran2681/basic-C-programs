@@ -70,7 +70,12 @@ void printNumbers(int arr[],int n){
 /////////***************/////////////
 /////////***************/////////////
 
+///Qsn
 
+///1st student marks=[10,20,30]
+//// 2nd student marks=[11,22,33]
+
+//CODE
 
 #include<stdio.h>
 int main()
