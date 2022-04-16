@@ -103,7 +103,7 @@ int main()
 }
 
 
-OUTPUT: 
+////OUTPUT: 
 
 MArks of 1st stdent 1st sub = 10
 MArks of 1st stdent 2nd sub = 20
@@ -122,3 +122,96 @@ MArks of 2nd stdent 3rd sub = 33
 
 
 
+// WAP to calculate odd numbers presents in a array
+
+
+
+#include<stdio.h>
+
+int countOdd(int arr[],int n);
+
+int main()
+{
+    int arr[]={1,2,3,4,5,6};
+    printf("%d",countOdd(arr,6));
+    return 0;
+}
+
+int countOdd(int arr[],int n){
+    int count=0;
+    for(int i=0;i<n;i++){
+        if(arr[i] % 2 != 0){
+            count++;
+        }
+    }in
+    return count;
+}
+
+///OUTPUT
+3
+
+
+
+/////////////****************///////////////
+/////////////****************///////////////
+
+
+*Qsn :- WAP to reverse an array
+
+
+#include<stdio.h>
+
+void reverse(int arr[],int n);
+void printArr(int arr[],int n);
+
+int main()
+{
+    int arr[]={1,2,3,4,5};
+    reverse(arr,5);
+    printArr(arr,5);
+    return 0;
+}
+
+void printArr(int arr[],int n){
+    for(int i=0;i<n;i++){
+        printf("%d\t",arr[i]);
+    }
+    printf("\n");
+}
+
+void reverse(int arr[],int n){
+    for(int i=0;i<n/2;i++){
+        int firstVal=arr[i];
+        int secondVal=arr[n-i-1];
+        arr[i]=secondVal;
+        arr[n-i-1]=firstVal;
+    }
+}
+
+
+
+
+
+
+
+
+QSN: WAP to stor first n fibonicci series in array
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Entr the n: ");
+    scanf("%d",&n);
+    int fib[n];
+    fib[0]=0;
+    fib[1]=1;
+    printf("%d\t%d\t",fib[0],fib[1]);
+    
+    for(int i=2;i<n;i++){
+        fib[i]=fib[i-1]+fib[i-2];
+        printf("%d\t",fib[i]);
+    }
+    printf("\n");
+    return 0;
+}
