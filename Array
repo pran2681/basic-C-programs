@@ -1,4 +1,5 @@
-//// WAP in C to print sum of array
+//// WAP in C TO PRINT SUM OF ARRAY
+
 
 #include<stdio.h>
 int main()
@@ -18,7 +19,8 @@ int main()
 
 
 
-//// WAP in C to enter the price of 3 products and print their final cost with GST
+//// WAP in C TO ENTER PRICE OF 3 PRODUCTS AND PRINT THEIR FINAL COST WITH GST
+
 
 #include <stdio.h>
 
@@ -122,7 +124,8 @@ MArks of 2nd stdent 3rd sub = 33
 
 
 
-// WAP to calculate odd numbers presents in a array
+// WAP TO CALCULATE ODD NUMBER PRESENT IN ARRAY
+
 
 
 
@@ -156,7 +159,7 @@ int countOdd(int arr[],int n){
 /////////////****************///////////////
 
 
-*Qsn :- WAP to reverse an array
+*Qsn :- WAP TO REVERSE ARRAY
 
 
 #include<stdio.h>
@@ -195,7 +198,8 @@ void reverse(int arr[],int n){
 
 
 
-QSN: WAP to stor first n fibonicci series in array
+QSN: WAP TO STORE FIBBONACCI SERIES IN ARRAY
+
 
 #include<stdio.h>
 int main()
@@ -222,7 +226,7 @@ int main()
 
 
 
-QSN: WAP to read and print array
+QSN: WAP TO READ AND PRINT ARRAY
 
 
 #include<stdio.h>
@@ -254,7 +258,8 @@ int main()
 
 
 
-QSN: WAP in C to print all negative elements in array
+QSN: WAP in C TO PRINT ALL NEGATIVE NUMBER IN C 
+
 
 
 #include<stdio.h>
@@ -286,6 +291,105 @@ int main()
 
 /////////////////////******************///////////////////////
 
+
+
+
+QSN: SORT ARRAY IN ASCENDING AND DESCENDIND ORDER
+
+
+
+ASCENDING
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the size of array: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter the elements: ");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]>arr[j]){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;}
+        }
+    }
+    printf("The elements in descending order are: ");
+    for(int i=0;i<n;i++){
+        printf("%d,",arr[i]);
+    }
+    return 0;
+}
+
+
+DESCENDIND 
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the size of array: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter the elements: ");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]<arr[j]){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;}
+        }
+    }
+    printf("The elements in descending order are: ");
+    for(int i=0;i<n;i++){
+        printf("%d,",arr[i]);
+    }
+    return 0;
+}
+
+
+
+/////////////////////******************///////////////////////
+
+
+QSN: C PROGRAM TO LINEAR SEARCH IN ARRAY
+
+#include<stdio.h>
+void main()
+{
+    int i,n,x,k=0;
+    
+    printf("Enter the size of the array: ");
+    scanf("%d",&n);
+    
+    int arr[n];
+    
+    printf("Enter the elements in array: ");
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("Enter the element to search: ");
+    scanf("%d",&x);
+    
+    for(i=0;i<n;i++){
+        if(x==arr[i]){
+            k=1;
+            break;
+        }
+    }
+    if(k==1){
+        printf("The element found at index %d",i);
+    }
+    else("The element not found");
+}
 
 
 
