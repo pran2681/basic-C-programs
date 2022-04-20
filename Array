@@ -570,3 +570,100 @@ int main()
 
 
 /////////////////////******************///////////////////////
+
+
+
+ WAP TO DELETE THE DUPLICATE ELEMENT FROM ARRAY
+ 
+ #include<stdio.h>
+int main()
+{
+    int size,i,j,k;
+    
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    int arr[size];
+    
+    
+    printf("Enter elements to the array: ");
+    for(i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+
+    for(i=0;i<size;i++){
+        for(j=i+1;j<size;j++){
+            if(arr[i]==arr[j]){
+                for(k=j;k<size-1;k++){
+                    arr[k]=arr[k+1];
+                }
+                size--;
+                
+                j--;
+            }
+        }
+    }
+    
+    printf("Array after delet the duplicate element: ");
+    for(i=0;i<size;i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    return 0;
+}
+
+
+
+
+/////////////////////******************///////////////////////
+
+
+
+
+WAP TO PRINT FREQUENCY IN ARRAY
+
+
+#include<stdio.h>
+int main()
+{
+    int size,i,j,k;
+    
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    int arr[size];
+    int freq[size];
+    
+    
+    printf("Enter elements to the array: ");
+    for(i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+        freq[i]=-1;
+    }
+    
+
+    for(i=0;i<size;i++){
+        k=1;
+        for(j=i+1;j<size;j++){
+            if(arr[i]==arr[j]){
+                k++;
+                freq[j]=0;
+            }
+        }if(freq[i] !=0){
+            freq[i]=k;
+        }
+    }
+    
+    printf("Frequncy of elements in array: ");
+    for(i=0;i<size;i++)
+    {
+        if(freq[i] !=0){
+        printf("%d occurs %d times\n", arr[i], freq[i]);
+            
+        }
+    }
+    return 0;
+}
+
+
+
+
