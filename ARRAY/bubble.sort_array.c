@@ -16,8 +16,8 @@ int main()
     }
     
 
-    for(i=size-2;i>=0;i--){
-        for(j=0;j<=i;j++){
+    for(i=0;i<size-1;i++){
+        for(j=0;j<size-1;j++){
             if(arr[j]>arr[j+1]){
                 temp=arr[j];
                 arr[j]=arr[j+1];
