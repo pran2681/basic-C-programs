@@ -1,3 +1,5 @@
+// Print namaste for hindi and nomoskar for assamese using function in C
+
 #include<stdio.h>
 void namaste();
 void nomoskar();
